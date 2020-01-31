@@ -30,9 +30,6 @@ export default function App() {
         <Episodes/>
       </Route>
 
-      <Route path='/locations'>
-        <Locations/>
-      </Route>
     </main>
   );
 }

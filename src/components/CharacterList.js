@@ -25,12 +25,18 @@ export default function CharacterList() {
     setQuery(event.target.value);
   }
 
-  const CharCard = styled.div`
-    background-color: lightblue;
-    width: 20%;
-    padding: 1%;
-    margin: 1%;
-  `;
+  // const CharCard = styled.div`
+  //   background-color: lightblue;
+  //   width: 20%;
+  //   padding: 1%;
+  //   margin: 1%;
+  // `;
+
+  // const LoaderStyle = styled.div`
+  //   text-align: center;
+  //   margin: 5% auto;
+  //   padding: 5%;
+  // `;
 
   return (
     <div className='container'>
@@ -47,7 +53,13 @@ export default function CharacterList() {
 
       </form>
       <section className="character-list">
-      {characters.map(e => {
+
+      {/* {characters[2] == null ? <div className='loader'><Loader
+      type='RevolvingDot'
+      color='#00BFFF'
+      height={400}
+      width={400}
+      timeout={3500}/></div> : characters.map(e => {
         return (
           <Link to={`/characters/${e.id}`}>
           <CharCard>
@@ -55,6 +67,18 @@ export default function CharacterList() {
             <h4>Species: {e.species}</h4>
             <img src={e.image} alt=''/>
           </CharCard>
+          </Link>
+        )
+      })} */}
+
+      {characters.map(e => {
+        return (
+          <Link to={`/characters/${e.id}`}>
+          <div>
+            <h3>Name: {e.name}</h3>
+            <h4>Species: {e.species}</h4>
+            <img src={e.image} alt=''/>
+          </div>
           </Link>
         )
       })}
