@@ -38,16 +38,31 @@ header h1 {
   text-align: center;
 }
 
-.char-cards {
-  background-color: lightblue;
-  width: 20%;
-  padding: 1%;
-  margin: 1%;
+a {
+  text-decoration: none;
+  color: black;
+}
+
+h2 {
+  text-align: center;
+}
+
+.episode-info {
+  display:flex;
+  flex-direction: row;
 }
 
 .search-bar {
   text-align: center;
   margin-bottom: 2%;
+}
+
+.episode-box {
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: column;
+  margin: 2%;
+  padding: 1%;
 }
 
 .character-list {

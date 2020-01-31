@@ -1,5 +1,8 @@
 import React, { useEffect, useState } from "react";
 import axios from 'axios';
+import Loader from 'react-loader-spinner';
+import styled from 'styled-components';
+import {Link} from 'react-router-dom';
 
 export default function CharacterList() {
   const [characters, setCharacters] = useState([]);
@@ -22,6 +25,13 @@ export default function CharacterList() {
     setQuery(event.target.value);
   }
 
+  const CharCard = styled.div`
+    background-color: lightblue;
+    width: 20%;
+    padding: 1%;
+    margin: 1%;
+  `;
+
   return (
     <div className='container'>
       <form className='search-bar'>
@@ -36,14 +46,16 @@ export default function CharacterList() {
           />
 
       </form>
-    <section className="character-list">
+      <section className="character-list">
       {characters.map(e => {
         return (
-          <div className='char-card'>
+          <Link to={`/characters/${e.id}`}>
+          <CharCard>
             <h3>Name: {e.name}</h3>
             <h4>Species: {e.species}</h4>
-            <img src={e.image}/>
-          </div>
+            <img src={e.image} alt=''/>
+          </CharCard>
+          </Link>
         )
       })}
     </section>

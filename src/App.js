@@ -1,9 +1,12 @@
 import React from "react";
-import {Link, Switch, Route} from 'react-router-dom';
+import { Route} from 'react-router-dom';
 import Header from "./components/Header.js";
 import CharacterList from './components/CharacterList';
 import SeachForm from './components/SearchForm';
 import WelcomePage from './components/WelcomePage';
+import CharacterCard from './components/CharacterCard';
+import Episodes from './components/Episodes';
+import Locations from './components/Locations';
 
 
 export default function App() {
@@ -17,6 +20,18 @@ export default function App() {
       <Route exact path='/characters'>
       <SeachForm/>
       <CharacterList/>
+      </Route>
+
+      <Route path='/characters/:id'>
+        <CharacterCard/>
+      </Route>
+
+      <Route path='/episodes'>
+        <Episodes/>
+      </Route>
+
+      <Route path='/locations'>
+        <Locations/>
       </Route>
     </main>
   );
