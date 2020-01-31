@@ -37,3 +37,17 @@ main {
 header h1 {
   text-align: center;
 }
+
+.char-cards {
+  background-color: lightblue;
+  width: 20%;
+  padding: 1%;
+  margin: 1%;
+}
+
+.character-list {
+  display:flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  width: 100%;
+}
