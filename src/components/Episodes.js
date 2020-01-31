@@ -27,7 +27,7 @@ const Episodes = props => {
             <div className='episode-box'>
                 {episode.map(e => {
                     return (
-                        <div>
+                        <div className='episode-card'>
                         <h3>Title: {e.name} ({e.episode})</h3>
                         <h5>Aired: {e.air_date}</h5>
                         </div>
@@ -37,7 +37,7 @@ const Episodes = props => {
             <div className='location-box'>
                 {locations.map(l => {
                     return (
-                        <div>
+                        <div className='location-card'>
                             <h4>Location: {l.name}</h4>
                             <h5>Type: {l.type}</h5>
                             <h5>Dimension: {l.dimension}</h5>

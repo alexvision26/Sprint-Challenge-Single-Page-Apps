@@ -6,7 +6,6 @@ import SeachForm from './components/SearchForm';
 import WelcomePage from './components/WelcomePage';
 import CharacterCard from './components/CharacterCard';
 import Episodes from './components/Episodes';
-import Locations from './components/Locations';
 
 
 export default function App() {

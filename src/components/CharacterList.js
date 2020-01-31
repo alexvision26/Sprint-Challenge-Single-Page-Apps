@@ -11,13 +11,13 @@ export default function CharacterList() {
 
   useEffect(() => {
     // TODO: Add API Request here - must run in `useEffect`
-    axios.get('https://rickandmortyapi.com/api/character/').then(res => {
+    setTimeout(()=> {axios.get('https://rickandmortyapi.com/api/character/').then(res => {
       // console.log(res.data.results)
       // setCharacters(res.data.results);
       const newChars = res.data.results.filter(char => char.name.toLowerCase().includes(query.toLowerCase())
       );
       setCharacters(newChars)
-    })
+    })}, 600)
     //  Important: verify the 2nd `useEffect` parameter: the dependancies array!
   }, [query]);
 
@@ -38,6 +38,7 @@ export default function CharacterList() {
   //   padding: 5%;
   // `;
 
+
   return (
     <div className='container'>
       <form className='search-bar'>
@@ -54,24 +55,12 @@ export default function CharacterList() {
       </form>
       <section className="character-list">
 
-      {/* {characters[2] == null ? <div className='loader'><Loader
+      {characters == 0 ? <div className='loader'><Loader
       type='RevolvingDot'
       color='#00BFFF'
       height={400}
       width={400}
       timeout={3500}/></div> : characters.map(e => {
-        return (
-          <Link to={`/characters/${e.id}`}>
-          <CharCard>
-            <h3>Name: {e.name}</h3>
-            <h4>Species: {e.species}</h4>
-            <img src={e.image} alt=''/>
-          </CharCard>
-          </Link>
-        )
-      })} */}
-
-      {characters.map(e => {
         return (
           <Link to={`/characters/${e.id}`}>
           <div>
@@ -82,6 +71,18 @@ export default function CharacterList() {
           </Link>
         )
       })}
+
+      {/* {characters.map(e => {
+        return (
+          <Link to={`/characters/${e.id}`}>
+          <div>
+            <h3>Name: {e.name}</h3>
+            <h4>Species: {e.species}</h4>
+            <img src={e.image} alt=''/>
+          </div>
+          </Link>
+        )
+      })} */}
     </section>
     </div>
   );
