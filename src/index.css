@@ -37,3 +37,94 @@ main {
 header h1 {
   text-align: center;
 }
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.loader {
+  position: relative;
+  margin-left: 30%;
+  margin-top: 5%;
+  width: 100%;
+  text-align: center;
+
+}
+
+.episode-card {
+  margin: 1.3%;
+  border: 1px solid lightblue;
+  text-align: center;
+  color: white;
+  height: 125px;
+  background:url('https://images2.minutemediacdn.com/image/upload/c_crop,h_788,w_1400,x_0,y_24/f_auto,q_auto,w_1100/v1555155291/shape/mentalfloss/rickandmorty.jpg') rgba(29, 24, 27, 0.73);
+  background-size:cover;
+  background-blend-mode: multiply;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.location-card {
+  margin: 1.3%;
+  border: 1px solid lightblue;
+  text-align: center;
+  color: white;
+  height: 125px;
+  background:url('https://images2.minutemediacdn.com/image/upload/c_crop,h_788,w_1400,x_0,y_24/f_auto,q_auto,w_1100/v1555155291/shape/mentalfloss/rickandmorty.jpg') rgba(29, 24, 27, 0.73);
+  background-size:cover;
+  background-blend-mode: multiply;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+h2 {
+  text-align: center;
+}
+
+.episode-info {
+  display:flex;
+  flex-direction: row;
+}
+
+.search-bar {
+  text-align: center;
+  margin-bottom: 2%;
+}
+
+.location-box {
+  width: 50%;
+  margin: 2%;
+  padding: 2% 1%;
+  width: 50%;
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: column;
+}
+
+.episode-box {
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: column;
+  margin: 2%;
+  padding: 2% 1%;
+  width: 50%;
+}
+
+.character-list {
+  display:flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.welcome-page {
+  text-align: center;
+}
+
+.search-form {
+  text-align: center;
+  margin: 3% 0;
+}
